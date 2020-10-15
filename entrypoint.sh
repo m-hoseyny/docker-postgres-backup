@@ -6,7 +6,16 @@ if [ -z "$CRON_SCHEDULE" ]; then
     exit 1
 fi
 
+if [ "$ONE_OFF" = "true" ]
+then
+    echo "One off task should begin..."
+    python3 /backup/backup.py
+fi
 # Write cron schedule
-echo "$CRON_SCHEDULE python -u /backup/backup.py > /dev/stdout" >> /var/spool/cron/crontabs/root
+echo "Starting System..."
+
+echo "$CRON_SCHEDULE python3 -u /backup/backup.py > /dev/stdout" >> /var/spool/cron/crontabs/root
+
+echo "Idle... Waiting for cron"
 
 exec "$@"
