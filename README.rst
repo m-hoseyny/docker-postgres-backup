@@ -13,6 +13,8 @@ Required environment variables
 * :code:`DB_USER`: Postgres username
 * :code:`DB_NAME`: Name of database
 * :code:`S3_PATH`: Amazon S3 path in the format: s3://bucket-name/some/path
+* :code:`S3_URL`: Amazon S3 URL, It can be use for Minio URL
+* :code:`ONE_OFF`: One off running the backup
 * :code:`AWS_ACCESS_KEY_ID`
 * :code:`AWS_SECRET_ACCESS_KEY`
 * :code:`AWS_DEFAULT_REGION`
@@ -39,6 +41,7 @@ The following environment variables are required:
 * :code:`DB_USER`: Postgres username
 * :code:`DB_NAME`: Name of database
 * :code:`S3_PATH`: Amazon S3 path in the format: s3://bucket-name/some/path
+* :code:`S3_URL`: Amazon S3 URL, It can be use for Minio URL
 * :code:`AWS_ACCESS_KEY_ID`
 * :code:`AWS_SECRET_ACCESS_KEY`
 * :code:`AWS_DEFAULT_REGION`
